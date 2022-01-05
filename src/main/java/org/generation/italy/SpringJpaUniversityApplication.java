@@ -1,4 +1,4 @@
-package com.example.demo;
+package org.generation.italy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
