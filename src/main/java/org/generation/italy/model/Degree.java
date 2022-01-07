@@ -1,19 +1,20 @@
 package org.generation.italy.model;
 
+import java.math.BigInteger;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="degrees")
 public class Degree {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private BigInteger id;
 	
 	private String name;
 	private String level;
@@ -21,20 +22,11 @@ public class Degree {
 	private String email;
 	private String website;
 	
-	@ManyToOne
-	@JoinColumn(name="department_id")
-	private Department department;
-	
-	public Integer getId() {
+	public BigInteger getId() {
 		return id;
 	}
-	public Department getDepartment() {
-		return department;
-	}
-	public void setDepartment(Department department) {
-		this.department = department;
-	}
-	public void setId(Integer id) {
+
+	public void setId(BigInteger id) {
 		this.id = id;
 	}
 	public String getName() {
